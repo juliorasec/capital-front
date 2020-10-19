@@ -1,0 +1,96 @@
+<div class="container-fluid">
+
+    <h4 style="margin-top: 20px;"> Detalhes do usuário </h4>
+
+    <hr>
+
+    <div *ngIf="user" class="row">
+        <div class="col-md-4">
+            <label for="inputNome">Nome</label>
+            <input disabled class="form-control" id="inputNome" [value]="user.name">
+        </div>
+
+        <div class="col-md-4">
+            <label for="inputEmail">E-mail</label>
+            <input disabled class="form-control" id="inputEmail" [value]="user.email">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="inputAtivo">Ativo</label>
+            <input disabled class="form-control" id="inputAtivo" [value]="user.isActive">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="inputTelefone">Telefone</label>
+            <input disabled class="form-control" id="inputTelefone" [value]="user.phone">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="inputReceita">Receita</label>
+            <input disabled class="form-control" id="inputReceita" [value]="user.revenue">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="inputTermos">Termos de condição</label>
+            <input disabled class="form-control" id="inputTermos" [value]="user.agreedTerms">
+        </div>
+    </div>
+
+
+    <h4 style="margin-top: 20px;"> Oportunidades </h4>
+
+    <hr>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Limite</th>
+                <th scope="col">Interesse</th>
+                <th scope="col">Termo</th>
+                <th scope="col">Ativo</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let opportunity of opportunities">
+                <td>{{opportunity.name}}</td>
+                <td>{{opportunity.limit}}</td>
+                <td>{{opportunity.interest}}</td>
+                <td>{{opportunity.term}}</td>
+                <td>{{opportunity.isActive}}</td>
+                <td>
+                    <button (click)="updateStatusOpportunities(opportunity)" type="button" class="btn btn-primary">
+                        <span *ngIf="opportunity.isActive"> Inativar </span>
+                        <span *ngIf="!opportunity.isActive"> Ativar </span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    <button style="margin-top: 20px;" (click)="backClick()" type="button" class="btn btn-primary">
+        Voltar
+    </button>
+
+
+
+
+
+
+</div>
