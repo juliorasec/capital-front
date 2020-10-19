@@ -1,27 +1,20 @@
-# CE Test - Web App
+<h1 style="text-align: center">
+  Júlio César - Capital Empreendedor
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+# Sobre
 
-## Development server
+O projeto desenvolvido, foi para criar a interface para clientes, contendo informações dos mesmos, e uma lista de oportunidades.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Configuração 
 
-## Code scaffolding
+Necessário instalar o node (npm i), e angular (npm install -g @angular/cli).
+Após isso iniciá-los, node (npm start), angular (ng s).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Abrir o mesmo, no localhost indicado. Mas sendo necessário iniciar o arquivo do back-end ao mesmo tempo, para interação de ambos. 
 
-## Build
+# Utilização
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Criado uma página inicial, que seria apresentação, e com função de redireciona-lo para a aba de user, que possui a informação dos clientes.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Na página users, está a opção de editar o cliente desejado, onde o próprio cliente pode acessar, e ativar ou não a sua oportunidade.
